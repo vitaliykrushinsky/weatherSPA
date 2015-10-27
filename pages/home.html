@@ -2,8 +2,8 @@
     <div class="col-md-6 col-md-offset-3">
         <h3>Forecast by City</h3>
         <div class="form-group">
-            <input type="text" class="form-control" ng-model="city"/>
+            <input type="text" class="form-control" ng-model="city" onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()"/>
         </div>
-        <a href="#/forecast" class="btn btn-primary">Get Forecast</a>
+        <a id="btnSearch" href="#/forecast" class="btn btn-primary">Get Forecast</a>
     </div>
 </div>

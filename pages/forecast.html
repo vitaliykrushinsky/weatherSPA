@@ -1,6 +1,6 @@
 <p><a href="#/">Back to search <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></p>
 
-<p>Forecast for: <span class="city label label-default">{{city}}</span></p>
+<p>Forecast for: <span class="city label label-primary">{{city}}</span></p>
 <hr>
 Choose Days: <a href="#/forecast/2" ng-class="{'bg-primary': days == '2'}">2</a> | <a href="#/forecast/5" ng-class="{'bg-primary': days == '5'}">5</a> | <a href="#/forecast/7" ng-class="{'bg-primary': days == '7'}">7</a>
 <hr>
@@ -9,10 +9,23 @@ Choose Days: <a href="#/forecast/2" ng-class="{'bg-primary': days == '2'}">2</a>
         <div class="col-md-6">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">{{ convertToDate(day.dt) | date: 'd MMM, y'  }}</h3>
+                    <h3 class="panel-title">{{ convertToDate(day.dt) | date: 'd MMM, y' }}</h3>
                 </div>
                 <div class="panel-body">
-                    Day temperature: {{ day.temp.day + ' &#8451;' }}
+                    <div>
+                        <span class="label label-default">Temperature</span>
+                        <p>Day temperature: {{ day.temp.day + ' &#8451;' }}</p>
+                        <p>Min temperature: {{ day.temp.min + ' &#8451;' }}</p>
+                        <p>Max temperature: {{ day.temp.max + ' &#8451;' }}</p>  
+                    </div>
+                    <div>
+                       <span class="label label-default">Pressure</span>
+                       <p>{{day.pressure + ' Pa'}}</p> 
+                    </div>
+                    <div>
+                       <span class="label label-default">Humidity</span>
+                       <p>{{day.humidity + '%'}}</p> 
+                    </div>
                 </div>
             </div>
         </div>

@@ -20,7 +20,6 @@ myApp.service('customService', function() {
     this.cityName = 'Kiev';
 });
 
-
 myApp.controller('homeController', ['$scope','customService', function($scope, customService) {
     $scope.city = customService.cityName;
     $scope.$watch('city', function() {
@@ -34,7 +33,7 @@ myApp.controller('forecastController', ['$scope','customService','$resource','$r
     $scope.city = customService.cityName;
     
     $scope.days = $routeParams.days || '2';
-    console.log($scope.days);
+    //console.log($scope.days);
     
     
     $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast/daily?&lang=uk&units=metric&appid=bd82977b86bf27fb59a04b61b657fb6f', 
@@ -52,7 +51,7 @@ myApp.controller('forecastController', ['$scope','customService','$resource','$r
     
     $scope.convertToDate = function(dt) {
         return new Date(dt * 1000);
-    }
-    
+    };
+
     
 }]);
