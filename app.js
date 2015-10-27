@@ -20,6 +20,19 @@ myApp.service('customService', function() {
     this.cityName = 'Kiev';
 });
 
+myApp.directive('searchResult', function() {
+    return {
+        templateUrl: 'directive/searchresult.html',
+        replace: true,
+        scope: {
+            weatherDay: '=',
+            convertToDate: '&',
+            dateFormat: '@'
+            
+        }
+    };
+});
+
 myApp.controller('homeController', ['$scope','customService', function($scope, customService) {
     $scope.city = customService.cityName;
     $scope.$watch('city', function() {

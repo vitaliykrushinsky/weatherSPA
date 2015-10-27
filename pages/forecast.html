@@ -7,27 +7,9 @@ Choose Days: <a href="#/forecast/2" ng-class="{'bg-primary': days == '2'}">2</a>
 <div ng-repeat="day in weatherResult.list">
     <div class="row">
         <div class="col-md-6">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">{{ convertToDate(day.dt) | date: 'd MMM, y' }}</h3>
-                </div>
-                <div class="panel-body">
-                    <div>
-                        <span class="label label-default">Temperature</span>
-                        <p>Day temperature: {{ day.temp.day + ' &#8451;' }}</p>
-                        <p>Min temperature: {{ day.temp.min + ' &#8451;' }}</p>
-                        <p>Max temperature: {{ day.temp.max + ' &#8451;' }}</p>  
-                    </div>
-                    <div>
-                       <span class="label label-default">Pressure</span>
-                       <p>{{day.pressure + ' Pa'}}</p> 
-                    </div>
-                    <div>
-                       <span class="label label-default">Humidity</span>
-                       <p>{{day.humidity + '%'}}</p> 
-                    </div>
-                </div>
-            </div>
+            <search-result weather-day="day" convert-to-date="convertToDate(adt)" date-format="d MMM, y">
+                
+            </search-result>
         </div>
     </div>
 </div>
