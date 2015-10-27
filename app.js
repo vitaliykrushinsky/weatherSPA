@@ -33,11 +33,15 @@ myApp.directive('searchResult', function() {
     };
 });
 
-myApp.controller('homeController', ['$scope','customService', function($scope, customService) {
+myApp.controller('homeController', ['$scope','customService','$location', function($scope, customService, $location) {
     $scope.city = customService.cityName;
     $scope.$watch('city', function() {
         customService.cityName = $scope.city;
     });
+    
+    $scope.submit = function() {
+        $location.path('/forecast');
+    }
     
 }]);
 
