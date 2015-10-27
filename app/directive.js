@@ -1,4 +1,4 @@
-myApp.directive('searchResult', function() {
+weatherApp.directive('searchResult', function() {
     return {
         templateUrl: 'directive/searchresult.html',
         replace: true,

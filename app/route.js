@@ -1,4 +1,4 @@
-myApp.config(function($routeProvider) {
+weatherApp.config(function($routeProvider) {
     $routeProvider
     .when('/', {
         templateUrl: 'pages/home.html',
