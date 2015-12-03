@@ -1,0 +1,14 @@
+{
+  "name": "weatherSPA",
+  "version": "1.0.0",
+  "description": "Angular's project",
+  "scripts": {
+    "start": "live-server"
+  },
+  "keywords": [],
+  "author": "vitaly krushinsky",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^0.8.2"
+  }
+}
