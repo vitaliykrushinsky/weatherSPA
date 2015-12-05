@@ -63,6 +63,7 @@ myApp.controller('forecastController', ['$scope','customService','$resource','$r
     );
     //console.log($scope.weatherAPI);
     
+    // call weatherAPI with some parameters and result store in weatherReasult 
     $scope.weatherResult = $scope.weatherAPI.get({ q: $scope.city, cnt: $scope.days });
     //console.log($scope.weatherResult);
     

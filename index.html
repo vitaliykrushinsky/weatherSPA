@@ -1,26 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us" ng-app="myApp">
     <head>
-        <title>AngularJS Weather Forecast SPA</title>
+        <title>Weather Forecast</title>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta charset="UTF-8">
-
         <!-- load bootstrap and fontawesome via CDN -->
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-        <style>
-            .bg-primary {
-                padding: 2px 3px;
-            }
-            .city{
-                font-size: 1.1em;
-            }
-            .panel-body p {
-                margin-bottom: 5px;
-            }
-            .nav>li>a {
-                display: none;
-            }
-        </style>
+        
+        <link rel="stylesheet" href="css/style.css">
         
         <!-- load angular via CDN -->
         <script src="https://code.angularjs.org/1.4.7/angular.min.js"></script>
@@ -30,26 +17,19 @@
         <script src="app.js"></script>
     </head>
     <body>
-
         <header>
 			<nav class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="/">AngularJS Weather</a>
-				</div>
-
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-				</ul>
-			</div>
+                <div class="container">
+                    <div class="navbar-header">
+                        <h2 class="navbar-brand" href="/">Angular Weather</h2>
+                    </div>
+                </div>
 			</nav>
 		</header>
-
-    <div class="container">
-        <div ng-view>
-            
+        <main>
+        <div class="container">
+            <div ng-view></div>
         </div>
-		</div>
-
+        </main>
     </body>
 </html>
