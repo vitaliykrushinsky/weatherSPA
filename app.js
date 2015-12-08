@@ -14,6 +14,9 @@ myApp.config(function($routeProvider) {
         templateUrl: 'pages/forecast.html',
         controller: 'forecastController'
     })
+    .otherwise({
+		redirectTo: '/'
+	});
 });
 
 myApp.service('customService', function() {
