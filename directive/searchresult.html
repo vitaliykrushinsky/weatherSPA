@@ -4,6 +4,12 @@
     </div>
     <div class="panel-body">
         <div>
+           <p>
+               <img ng-src="http://openweathermap.org/img/w/{{weatherDay.weather[0].icon}}.png" alt="">
+               <span>{{weatherDay.weather[0].description}}</span>
+           </p> 
+        </div>
+        <div>
             <span class="label label-default">Temperature</span>
             <p>Day temperature: {{ weatherDay.temp.day + ' &#8451;' }}</p>
             <p>Min temperature: {{ weatherDay.temp.min + ' &#8451;' }}</p>
