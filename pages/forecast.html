@@ -2,7 +2,10 @@
 
 <p>Forecast for: <span class="city label label-primary">{{city}}</span></p>
 <hr>
-Choose Days: <a href="#/forecast/2" ng-class="{'bg-primary': days == '2'}">2</a> | <a href="#/forecast/3" ng-class="{'bg-primary': days == '3'}">3</a> | <a href="#/forecast/5" ng-class="{'bg-primary': days == '5'}">5</a>
+Choose Days: 
+<a class="btn btn-default btn-sm" href="#/forecast/2" ng-class="{'active': days == '2'}">2</a>
+<a class="btn btn-default btn-sm" href="#/forecast/3" ng-class="{'active': days == '3'}">3</a>
+<a class="btn btn-default btn-sm" href="#/forecast/5" ng-class="{'active': days == '5'}">5</a>
 <hr>
 <div ng-repeat="day in weatherResult.list">
     <div class="row">
