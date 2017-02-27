@@ -56,7 +56,7 @@ myApp.controller('forecastController', ['$scope','customService','$resource','$r
     //console.log($scope.days);
     
     
-    $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast/daily?&lang=uk&units=metric&appid=40d7857a8275d19e5f4170f4d11b3f33', 
+    $scope.weatherAPI = $resource('http://api.openweathermap.org/data/2.5/forecast/daily?&lang=en&units=metric&appid=40d7857a8275d19e5f4170f4d11b3f33', 
         {
         callback: 'JSON_CALLBACK'
         },
